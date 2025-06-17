@@ -1,0 +1,17 @@
+/usr/bin/ffmpeg -hide_banner -y -y -r 10 -start_number 0 -start_number_range 1 -i /home/jill/Web/Kookie FVWM/frame%04d.png -f webp -lossless 0 -compression_level 4 -q:v 75 -preset default -loop 0 /home/jill/Web/Kookie FVWM/SubmissiveAndBookable.webp
+=====================================================
+Input #0, image2, from '/home/jill/Web/Kookie FVWM/frame%04d.png':
+  Duration: 00:00:01.28, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 150x80 [SAR 9448:9448 DAR 15:8], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> webp (libwebp_anim))
+Press [q] to stop, [?] for help
+Output #0, webp, to '/home/jill/Web/Kookie FVWM/SubmissiveAndBookable.webp':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: webp, bgra(pc, gbr/unknown/unknown, progressive), 150x80 [SAR 1:1 DAR 15:8], q=2-31, 200 kb/s, 10 fps, 1k tbn
+      Metadata:
+        encoder         : Lavc61.19.100 libwebp_anim
+[libwebp_anim @ 0x5eb70ca85900] Using libwebp for RGB-to-YUV conversion. You may want to consider passing in YUV instead for lossy encoding.
+[out#0/webp @ 0x5eb70ca86840] video:131KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000000%
+frame=    1 fps=0.0 q=-0.0 Lsize=     131KiB time=00:00:03.20 bitrate= 335.1kbits/s speed=  76x    

@@ -1,0 +1,21 @@
+/usr/bin/ffmpeg -hide_banner -y -y -r 10 -start_number 0 -start_number_range 1 -i /home/jill/Web/Kookie FVWM/frame%04d.png -i /home/jill/Web/Kookie FVWM/KritaTempPalettegen_%06d.png -lavfi [0:v][1:v]paletteuse=dither=sierra2_4a:diff_mode=none -f gif -loop 0 -gifflags +transdiff /home/jill/Web/Kookie FVWM/SubmissiveAndBookable.gif
+=====================================================
+Input #0, image2, from '/home/jill/Web/Kookie FVWM/frame%04d.png':
+  Duration: 00:00:01.28, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 150x80 [SAR 9448:9448 DAR 15:8], 25 fps, 25 tbr, 25 tbn
+Input #1, image2, from '/home/jill/Web/Kookie FVWM/KritaTempPalettegen_%06d.png':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: N/A
+  Stream #1:0: Video: png, rgba(pc, gbr/unknown/unknown), 16x16 [SAR 1:1 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 (png) -> paletteuse
+  Stream #1:0 (png) -> paletteuse
+  paletteuse:default -> Stream #0:0 (gif)
+Press [q] to stop, [?] for help
+Output #0, gif, to '/home/jill/Web/Kookie FVWM/SubmissiveAndBookable.gif':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: gif, pal8(pc, gbr/unknown/unknown, progressive), 150x80 [SAR 1:1 DAR 15:8], q=2-31, 200 kb/s, 10 fps, 100 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 gif
+[out#0/gif @ 0x64702b43fe40] video:111KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.017635%
+frame=   32 fps=0.0 q=-0.0 Lsize=     111KiB time=00:00:03.20 bitrate= 283.6kbits/s speed= 146x    

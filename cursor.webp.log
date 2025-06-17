@@ -1,0 +1,17 @@
+/usr/bin/ffmpeg -hide_banner -y -y -r 8 -start_number 0 -start_number_range 1 -i /home/kooks/Web/Kookie FVWM/frame%04d.png -f webp -lossless 0 -compression_level 4 -q:v 75 -preset default -loop 0 /home/kooks/Web/Kookie FVWM/cursor.webp
+=====================================================
+Input #0, image2, from '/home/kooks/Web/Kookie FVWM/frame%04d.png':
+  Duration: 00:00:00.16, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown), 70x70 [SAR 3937:3937 DAR 1:1], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> webp (libwebp_anim))
+Press [q] to stop, [?] for help
+Output #0, webp, to '/home/kooks/Web/Kookie FVWM/cursor.webp':
+  Metadata:
+    encoder         : Lavf61.1.100
+  Stream #0:0: Video: webp, bgra(pc, gbr/unknown/unknown, progressive), 70x70 [SAR 1:1 DAR 1:1], q=2-31, 200 kb/s, 8 fps, 1k tbn
+      Metadata:
+        encoder         : Lavc61.3.100 libwebp_anim
+[libwebp_anim @ 0x560686560d40] Using libwebp for RGB-to-YUV conversion. You may want to consider passing in YUV instead for lossy encoding.
+[out#0/webp @ 0x56068656c3c0] video:9KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000000%
+frame=    1 fps=0.0 q=-0.0 Lsize=       9KiB time=00:00:00.50 bitrate= 148.9kbits/s speed=10.1x    

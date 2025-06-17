@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FVWM2 Style OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" height="0">
+  <defs>
+    <filter id="pixelate" x="0" y="0">
+      <feFlood x="2" y="2" height="1" width="1"/> 
+      <feComposite width="5" height="5"/>
+      <feTile result="a"/>
+      <feComposite in="SourceGraphic" in2="a" 
+                   operator="in"/>
+      <feMorphology operator="dilate"
+                    radius="2.5"/>
+    </filter>
+  </defs>
+</svg>    
+    
+
+    <!-- Main window -->
+    <div class="window" id="main-window">
+        <div class="window-header">
+            <span>Welcome to my site</span>
+            <div class="window-controls">
+                <div class="window-button" onclick="minimizeWindow('main-window')"><img class="buttonimg" src="expand.png" alt=""></div>
+                <div class="window-button" onclick="closeWindow('main-window')"><img class="buttonimg" src="cross.png" alt=""></div>
+            </div>
+        </div>
+        <div class="window-scroll">
+        <div class="window-content">
+            <div class="y2kbrowser">
+              <div style="padding-left: 5%; border-bottom-width: 2px; border-bottom-style: solid;  border-color: #FF00FF;">
+                  <img src="Kookie Logo mega small.png" alt="Kookie logo"><img src="transritez.gif" alt="">
+              </div> 
+              <h1>Welcome to my page</h1>
+              <p>I make hyperpop adjacent pop-rock music, with an emphasis on lyrical content and vocals.</p>
+              <h3>Feel free to open, close, drag around windows!</h3>
+              <b></b>
+              
+              <img style="margin-left: 20px;" src="Girl failure.gif" alt=""><img style="margin-left: 100px;" src="scrollformore.gif" alt="">
+              <b></b>
+              <img style="width: 544px; margin-top: 3px;" src="It Takes Time.webp" alt="">
+              <h1>Bio</h1>
+              <p style="border-style: dotted;">BORK BORK! Arrrf! ARF! <b></b> are we going to the park???? ARF ARF ARF ARF!  wruff...    BALL!!!!!!</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<!--Cool people-->
+
+    <div class="window" id="MSN">
+        <div class="window-header">
+            <span>LSN Messenger</span>
+            <div class="window-controls">
+                <div class="window-button" onclick="minimizeWindow('MSN')"><img class="buttonimg" src="expand.png" alt=""></div>
+                <div class="window-button" onclick="closeWindow('MSN')"><img class="buttonimg" src="cross.png" alt=""></div>
+            </div>
+        </div>
+            <div class="msnwindow">
+
+              <div style="height: 100%; overflow: auto;" >
+                <div class="msnheader">
+                   Cool People
+                </div>
+                <h3>Feature in my music</h3>
+                <div class="msnprofile">
+                  <a href="https://linktr.ee/limitedsightdistance">
+                    <img src="BirdSatanFrame.webp" alt="">
+                    <p>Bird Satan aka Limited Sight Distance</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://bsky.app/profile/sonicmega.bsky.social">
+                    <img src="SeanChilpockframe.webp" alt="">
+                    <p>Sean Chiplock - The voice of Magic Boy (and Mista ig.)</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://bsky.app/profile/devlionmanva.bsky.social">
+                    <img src="Devframe.webp" alt="">
+                    <p>Dev Campbell - The voice of Jack and Pr. Hotsformom</p>
+                  </a>
+                </div> 
+
+
+                <h3>The Dog Crew</h3>
+                <div class="msnprofile">
+                  <a href="https://furfag.online">
+                    <img src="Pupframe.webp" alt="">
+                    <p>P.U.P. - Sex-positive queer music</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://bassdog.bandcamp.com">
+                    <img src="Bassdogframe.webp" alt="">
+                    <p>BASSDOG - High energy hyperpop</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://clickertrained.com">
+                    <img src="Evaframe.webp" alt="">
+                    <p>Eva aka Sharkpup - Reporter, Manager</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://sparklecore.dog/">
+                    <img src="Salvframe.webp" alt=""> 
+                    <p>Salv/Mailpup - Her music inspires me a lot</p>
+                  </a>                
+                </div>
+                <div class="msnprofile">
+                  <a href="https://www.hyperpup.pet/">
+                    <img src="Hyperpupframe.webp" alt=""> 
+                    <p>HYPERPUP - Hyper-oriented rave music</p>
+                  </a>
+                </div>
+
+                <h3>The VR gang</h3>
+                <div class="msnprofile">
+                  <a href="https://alexgraeymusic.bandcamp.com/album/storybook">
+                    <img src="Alexframe.webp" alt="">
+                    <p>Alex Graey - Makes cute gay songs</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://youtube.com/@starheartvr">
+                    <img src="Starheartframe.webp" alt="">
+                    <p>Starheart - Amazing vocalist and songwriter</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://www.youtube.com/watch?v=cXTKzaGtR-I">
+                    <img src="Vinnyframe.webp" alt="">
+                    <p>Altered Evil - Makes 90s inspired music, and short films</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="http://lotie.xyz/">
+                    <img src="Lotieframe.webp" alt="">
+                    <p>Lotie - Incredible Jazz Pianist</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://kitkatsingsmeow.carrd.co/">
+                    <img src="KitKatframe.webp" alt="">
+                    <p>Kit Kat Sings - Emotional Vocals and cheerful vtubing</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="">
+                    <img src="Sentryframe.webp" alt="">
+                    <p>Sentry - Gorgeous crooning voice and retro aesthetics</p>
+                  </a>
+                </div>
+                <div class="msnprofile">
+                  <a href="https://www.twitch.tv/corbelleplays">
+                    <img src="Corbframe.webp" alt="">
+                    <p>Corbelle - Organizes cool events</p>
+                  </a>
+                </div>
+
+
+
+              </div>
+            </div>
+    </div>
+
+  <!--Contact-->
+
+    <div class="window" id="contact">
+        <div class="window-header">
+            <span>Contact Me</span>
+            <div class="window-controls">
+                <div class="window-button" onclick="minimizeWindow('contact')"><img class="buttonimg" src="expand.png" alt=""></div>
+                <div class="window-button" onclick="closeWindow('contact')"><img class="buttonimg" src="cross.png" alt=""></div>
+            </div>
+        </div>
+          <div class="msnwindow">
+            <div class="msncontactpage">
+              <img src="Kookieframe.webp" alt="" style="width:120px;">
+              <h2>Kookie</h2>
+              <div class="msncontactlist">
+                <div class="msncontactcolumn">
+                  <img src="SubmissiveAndBookable.gif" alt="">   
+                  <div>
+                    email: <a href="mailto:kookie.vrsinger@gmail.com">kookie.vrsinger@gmail.com</a>
+                  </div>
+                  <div>
+                    signal: <a href="mhttps://signal.me/#eu/V8fmpvM8_9XMRxT77mBBMLD9YrsCmBawp4lp1HrPZ0IXqZvvU-1EEaMtiK_ipAsr">kookie.69</a>
+                  </div>
+                  <div>
+                    fanmail: coming soon
+                  </div>
+
+                </div>
+                <div class="msncontactcolumn">
+                  <div>
+                    bluesky: <a href="https://bsky.app/profile/kookie.music">@kookie.music</a>
+                  </div>
+                  <div>
+                    twitter: <a href="https://x.com/Kookie_Sings">@Kookie_Sings</a>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <!--Merch-->
+
+    <div class="window" id="merch">
+        <div class="window-header">
+            <span>Merch</span>
+            <div class="window-controls">
+                <div class="window-button" onclick="minimizeWindow('merch')"><img class="buttonimg" src="expand.png" alt=""></div>
+                <div class="window-button" onclick="closeWindow('merch')"><img class="buttonimg" src="cross.png" alt=""></div>
+            </div>
+        </div>
+        <div class="window-scroll">
+        <div class="window-content">
+            <div class="y2kbrowser">
+              <h1>Coming soon</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--Music-->
+
+    <div class="window" id="music">
+        <div class="window-header">
+            <span>Pupster</span>
+            <div class="window-controls">
+                <div class="window-button" onclick="videoClose('video');minimizeWindow('music');"><img class="buttonimg" src="expand.png" alt=""></div>
+                <div class="window-button" onclick="videoClose('video');closeWindow('music');"><img class="buttonimg" src="cross.png" alt=""></div>
+            </div>
+        </div>
+          <div class="pupsterwindow">
+            <div class="pupstertopper">
+              <div class="pupsterstreammenu">
+                where 2 listen:
+                <div class="pupsteritemlistgreen">
+                  <p>Bandcamp</p>
+                  <p>Spotify</p>
+                  <p>Youtube</p>
+                  <p>Youtube Music</p>
+                  <p>iTunes</p>
+                  <p>Deezer</p>
+                  <p>Everywhere else</p>
+                  
+                </div>
+              </div>
+                <ul>
+                  <li>
+                    <img src="BabyTrans.webp" alt="">
+                  </li>
+                  <li>
+                    <img src="LoveTime.webp" alt="">
+                  </li>
+                  <li>
+                    <img src="Collar.webp" alt="">
+                  </li>
+                  <li>
+                    <img src="ShootMe.webp" alt="">
+                  </li>
+                </ul>
+              <div class="pupsterstreammenugrey">
+                Where 2 see me
+                <div class="pupsteritemlistgrey">
+                  <p>BOOK ME</p>
+                  <p>BOOK ME</p>
+                  <p>BOOK ME</p>
+                  <p>BOOK ME</p>
+                  <p>BOOK ME</p>
+                  <p>BOOK ME</p>
+                  <p>BOOK ME</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="pupsterbottom">
+              
+              <div class="pupsterads">
+                <img src="NissanAltima.gif" alt="">
+              </div>
+              <video id="video" width="240" height="200" autoplay>
+                <source src="y2kshitty.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+
+
+   
+    <!--Webamp
+                <div id="app"></div>
+                    <script src="https://unpkg.com/webamp"></script>
+                    <script>
+                        const app = document.getElementById("app")
+                        const webamp = new Webamp();
+                        webamp.renderWhenReady(app);
+                    </script>
+    -->
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+            <!-- Start Button Tile -->
+        <div class="taskbar-tile" onclick="focusWindow('main-window')">
+            <div class="task-button"><img src="Help.png" alt=""></div>
+            <div class="taskbar-tile-title">
+                  ABOUT
+            </div>
+        </div>
+
+            <!-- Googly eyes -->
+        <div class="taskbar-tile-dead" >
+          <div class="eye-container">
+              <div class="eye">
+                  <div class="pupil" id="left-pupil"></div>
+              </div>
+              <div class="eye">
+                  <div class="pupil" id="right-pupil"></div>
+              </div>
+          </div> 
+        </div>
+
+        
+        <!-- Task Buttons Tile -->
+        <div class="taskbar-apps">
+            <!-- Example task button tile -->
+            <div class="taskbar-tile" onclick="videoOpen('video'); focusWindow('music');">
+                <div class="task-button"><img src="music.png" alt=""></div>
+                <div class="taskbar-tile-title">
+                  MUSIC
+                </div>
+            </div>
+        </div>
+
+        <div class="taskbar-apps">
+            <!-- Example task button tile -->
+            <div class="taskbar-tile" onclick="focusWindow('merch')">
+                <div class="task-button"><img src="merch.png" alt=""></div>
+                <div class="taskbar-tile-title">
+                  MERCH
+                </div>
+            </div>
+        </div>
+
+        <div class="taskbar-apps">
+            <!-- Example task button tile -->
+            <div class="taskbar-tile" onclick="focusWindow('MSN')">
+                <div class="task-button"><img src="coolppl.png" alt=""></div>
+            <div class="taskbar-tile-title">
+              COOL PPL
+            </div>
+            </div>
+        </div>
+
+        <div class="taskbar-apps">
+            <!-- Example task button tile -->
+            <div class="taskbar-tile" onclick="focusWindow('contact')">
+                <div class="task-button"><img src="contact.png" alt=""></div>
+                <div class="taskbar-tile-title">
+                  CONTACT
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Clock Tile -->
+        <div class="taskbar-tile-dead analog-clock-container">
+            <canvas id="taskbar-clock" width="80" height="80"></canvas>
+        </div>
+        </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

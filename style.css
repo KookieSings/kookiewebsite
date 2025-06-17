@@ -1,0 +1,605 @@
+@font-face {
+    font-family: 'sysfont';
+    src: url('sysfont.woff2') format('woff2'),
+         url('sysfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'distress';
+    src: url('TheBattleCont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'sister';
+    src: url('LoveYaLikeASister-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'y2k';
+    src: url('whitrabt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html { 
+    /*filter: url("#pixelate");*/
+
+}
+svg { display: block }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING */
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering: -o-crisp-edges;           /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: pixelated;
+    image-rendering: optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;   /* IE */
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+
+
+
+body {
+    cursor: url(cursormain.webp), pointer;
+    font-family: 'sysfont', 'Courrier New' , monospace;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    text-rendering: optimizeSpeed;
+    background-color: #EAC;
+    background-image: url('wallpaper2.png');
+    color: #000;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* Add CRT scanlines effect */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 2px;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+/* Add CRT curvature */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Taskbar */
+.taskbar {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    border: 5px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    cursor: url(cursormain.webp), pointer;
+    
+    height: 150px;
+    background: #A36;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0px;
+    z-index: 100;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+
+.taskbar-tile {
+    width: 140px;
+    height: 140px;
+    margin: 0px;
+    flex-shrink: 0;
+    background: #EDE;
+    border: 4px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 1px 1px 0px #ffffff;
+    background-image: url('dither.png');
+
+}
+
+.taskbar-tile-dead {
+    width: 140px;
+    height: 140px;
+    margin: 0px;
+    flex-shrink: 0;
+    background: #EDE;
+    border: 4px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 1px 1px 0px #ffffff;
+    background-image: url('dither.png');
+
+}
+
+
+.taskbar-tile:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0px #808080;
+    color: white;
+    background-image: url('dither2.png');
+}
+
+.taskbar-tile-title{
+  font-size: 19pt;
+  background-color: #EDE;
+}
+
+.start-button {
+    background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+}
+
+.start-button:active {
+    box-shadow: inset 1px 1px 2px #000;
+}
+
+.taskbar-apps {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.task-button {
+   
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+
+
+
+
+/* Clock tile */
+.analog-clock-container {
+    margin-left: 0;
+}
+
+#taskbar-clock {
+    width: 130px;
+    height: 130px;
+    margin: 5px;
+    image-rendering: pixelated;
+}
+
+
+
+/* Windows */
+.window {
+    top: 500px;
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: #EDE;
+    border: 4px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.window.active {
+    z-index: 2000;
+}
+
+.window-header {
+    background: #A36;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    padding: 3px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    cursor: move;
+    user-select: none;
+    padding-left: 10px;
+}
+
+.window-controls {
+    display: flex;
+}
+
+.window-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
+    background: #EDE;
+    color: black;
+    font-size: 40px;
+    border: 4px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: url(cursormain.webp), pointer;
+}
+
+.buttonimg {
+  width: 40px;
+}
+
+.window-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.window-content {
+    flex-grow: 1;
+    padding: 0px;
+    margin-left: 40px;
+    overflow: auto;
+    background: #EDE;
+    border: 4px solid;
+    border-color: #888 #fff #fff #888;
+    height: 100%;
+}
+
+.window-scroll {
+  background-color: #B48;
+  flex-grow: 1;
+  overflow: auto;
+  background-image: url('scroll.png');
+}
+
+/* Webpage classes */
+
+.y2kbrowser {
+    font-family: "sister";
+    background-color: black;
+    color: white;
+    background-clip: padding-box;
+    margin-left: 0px;
+    cursor: url(cursor.webp), auto;
+    height: 400%;
+    overflow-x: hidden;
+}
+
+.y2kbrowser h1{
+    font-family: "distress";
+    margin: 10px;
+}
+
+.y2kbrowser h3{
+    font-size: 22pt;
+}
+
+.y2kbrowser p {
+    border-style: dashed;
+    border-width: 10px;
+    border-color: #F0F;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16pt;
+}
+
+/* MSN classes */
+
+.msnwindow {
+    background-image: url(msnbg.png);
+    height: 450px;
+    
+}
+
+.msnheader {
+    padding: 10px;
+    text-align: center;
+    height: 100px;
+    font-size: 50pt;
+    font-family: "sister";
+}
+
+.msnwindow h3 {
+  font-family: "sister";
+  padding-left: 20px;
+  border-bottom: 4px dotted grey;
+  margin-top: 10px;
+  color: grey;
+}
+
+.msnwindow h2 {
+  font-family: "sister";
+  border-bottom: 4px dotted grey;
+  margin-top: 2px;
+  color: grey;
+}
+
+
+.msnprofile a {
+    display: flex;
+    align-items: center;
+    font-family: "sister";
+    font-size: 22pt;
+}
+
+
+
+
+.msnprofile {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-family: "sister";
+    font-size: 22pt;
+
+}
+
+.msnprofile:hover{
+    margin-left: 40px;
+}
+
+.msncontactpage {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.msncontactcolumn {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.msncontactcolumn div {
+    margin-top: 10px;
+    font-size: 14pt;
+}
+
+
+.msncontactlist {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    align-items: center;
+}
+
+/* Pupster */
+
+.pupsterwindow {
+    background-image: url(Pupster.webp);
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: url(cursormain.webp), auto;
+    
+}
+
+.pupstertopper {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+
+.pupsterwindow ul {
+    width: 200px;
+    height: 220px;
+    display: flex;
+    gap: 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 30px;
+    flex-grow: 2;
+
+}
+
+.pupsterwindow li {
+    margin: 0px;
+    list-style-type: none;
+    background-color: none;
+    border: 0px solid #ddd;
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+}
+
+.pupsterstreammenu {
+    background-color: #bedf5c;
+    background-image: linear-gradient(0deg,rgba(173, 199, 93, 1) 0%, rgba(190, 223, 92, 1) 20%, rgba(190, 223, 92, 1) 80%, rgba(240, 240, 240, 1) 100%);
+    margin: 10px;
+    height: 180px;
+    width: 160px;
+    border: 2px #080 solid;
+    border-radius: 10px;
+    font-family: "y2k";
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    font-size: 12pt;
+    
+}
+
+.pupsterstreammenugrey {
+    background: #a3a3a3;
+    background: linear-gradient(0deg,rgba(163, 163, 163, 1) 0%, rgba(208, 208, 208, 1) 30%, rgba(208, 208, 208, 1) 90%, rgba(255, 255, 255, 1) 100%);   
+    margin: 10px;
+    height: 180px;
+    width: 160px;
+    border: 2px #333 solid;
+    border-radius: 10px;
+    font-family: "y2k";
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    font-size: 12pt;
+    
+}
+
+
+.pupsteritemlistgreen {
+    background-color: #e0f29c;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pupsteritemlistgreen p {
+    width: 100%;
+}
+
+.pupsteritemlistgreen p:nth-child(odd) {
+    background-color: #eef7be;
+}
+
+.pupsteritemlistgreen p:hover {
+    background-color: #eff7ee;
+}
+
+.pupsteritemlistgrey {
+    background-color: #BBB;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pupsteritemlistgrey p {
+    width: 100%;
+}
+
+.pupsteritemlistgrey p:nth-child(odd) {
+    background-color: #CCC;
+}
+
+.pupsteritemlistgrey p:hover {
+    background-color: #DDD;
+}
+
+.pupsterbottom {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 5px;
+    
+}
+
+
+
+
+
+/* Googly eyes */
+.eye-container {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    image-rendering: pixelated;
+}
+
+.eye {
+    width: 45px;
+    height: 90px;
+    background: white;
+    border-radius: 20px / 45px;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid black;
+    will-change: transform;
+    image-rendering: pixelated;
+}
+
+.pupil {
+   width: 18px;
+    height: 36px; 
+    background: black;
+    border-radius: 9px / 18px; 
+    position: absolute;
+    top: 27px; 
+    left: 9px; 
+    transition: all 0.1s;
+    will-change: transform;
+    backface-visibility: hidden;
+    image-rendering: pixelated;
+}
+
+/* Start menu */
+.start-menu {
+    position: absolute;
+    bottom: 32px;
+    left: 5px;
+    width: 200px;
+    background: #d0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    display: none;
+    z-index: 1001;
+}
+
+.start-menu-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.start-menu-item:hover {
+    background: #000080;
+    color: white;
+}
+
+
