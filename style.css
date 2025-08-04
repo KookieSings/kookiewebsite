@@ -333,6 +333,17 @@ body::before {
     font-size: 16pt;
 }
 
+.y2kbrowser ul{
+   list-style-type: circle;
+   list-style-position: inside;
+   padding-left: 20px;
+   font-size: 16pt;
+}
+
+.y2kbrowser li{
+  padding-top: 10px;
+}
+
 /* MSN classes */
 
 .msnwindow {
@@ -499,15 +510,21 @@ body::before {
     align-items: center;
 }
 
-.pupsteritemlistgreen p {
+
+
+.pupsteritemlistgreen p,
+.pupsteritemlistgreen a {
+
     width: 100%;
 }
 
-.pupsteritemlistgreen p:nth-child(odd) {
+.pupsteritemlistgreen p:nth-child(odd),
+.pupsteritemlistgreen a:nth-child(odd) {
     background-color: #eef7be;
 }
 
-.pupsteritemlistgreen p:hover {
+.pupsteritemlistgreen p:hover, 
+.pupsteritemlistgreen a:hover {
     background-color: #eff7ee;
 }
 
@@ -519,15 +536,18 @@ body::before {
     align-items: center;
 }
 
-.pupsteritemlistgrey p {
+.pupsteritemlistgrey p,
+.pupsteritemlistgrey a {
     width: 100%;
 }
 
-.pupsteritemlistgrey p:nth-child(odd) {
+.pupsteritemlistgrey p:nth-child(odd),
+.pupsteritemlistgrey a:nth-child(odd) {
     background-color: #CCC;
 }
 
-.pupsteritemlistgrey p:hover {
+.pupsteritemlistgrey p:hover,
+.pupsteritemlistgrey a:hover {
     background-color: #DDD;
 }
 
