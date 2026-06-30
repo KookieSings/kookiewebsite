@@ -19,6 +19,12 @@ body {
     overflow: hidden;
 }
 
+.wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .phonebody{
     position: relative;
     top: -665px;
